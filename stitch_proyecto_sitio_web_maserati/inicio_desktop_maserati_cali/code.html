@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maserati Driving School | Inicio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#ad8059",
+              "surface": "#faf9ff",
+              "tertiary-container": "#371b00",
+              "secondary-container": "#de2c3b",
+              "on-surface": "#081a3b",
+              "on-primary-fixed": "#081a3b",
+              "primary": "#000a24",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#d9e2ff",
+              "surface-container-highest": "#d9e2ff",
+              "secondary": "#b90725",
+              "inverse-surface": "#203051",
+              "tertiary": "#170800",
+              "surface-tint": "#4f5e82",
+              "on-primary-container": "#7989b0",
+              "surface-container": "#e9edff",
+              "on-tertiary-fixed": "#2e1500",
+              "on-background": "#081a3b",
+              "secondary-fixed-dim": "#ffb3b0",
+              "on-surface-variant": "#45464e",
+              "background": "#faf9ff",
+              "surface-variant": "#d9e2ff",
+              "on-secondary-fixed": "#410006",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f1f3ff",
+              "inverse-primary": "#b6c6f0",
+              "surface-container-high": "#e1e8ff",
+              "outline-variant": "#c5c6cf",
+              "tertiary-fixed": "#ffdcc1",
+              "on-primary-fixed-variant": "#374669",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#edf0ff",
+              "secondary-fixed": "#ffdad8",
+              "primary-fixed-dim": "#b6c6f0",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#f0bc91",
+              "on-tertiary-fixed-variant": "#623f1d",
+              "outline": "#75777f",
+              "on-secondary-fixed-variant": "#93001a",
+              "primary-container": "#102142",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#fffbff",
+              "error": "#ba1a1a",
+              "surface-bright": "#faf9ff",
+              "surface-dim": "#ccdaff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Manrope', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(250, 249, 255, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Maserati Logo" class="h-10 w-10 object-contain" data-alt="minimalist logo of Maserati Driving School featuring a professional navy and red emblem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6EasJ9jwTrgw0hL_QP8e7B913gAX2KmrUEYJMBxYpO7kekb_r6grWIPXYdHTNoKMqMLYG2Y_MXz-4IB_miOzfFzmaHNxdUFbSyej4GqGbKTLswTus4bcRchm-ZugRisU1GZ6e0IyUO5ADpxTRP4wFYD1QfFISws2WiXftBJ7t25Cf2lcUP8X8CsHHmoa_ShP4ms57sTo9I2veVPi0FyL5h0DaJxLRXnQzePNHlutTUmvIZ0bjlmV4FZjohNVR23yANt-2gLLbvUs"/>
+<span class="text-2xl font-extrabold text-[#102142] dark:text-slate-100 tracking-tighter">Maserati Driving School</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#C3142B] font-bold border-b-2 border-[#C3142B] pb-1 font-manrope text-sm tracking-tight" href="#">Cursos</a>
+<a class="text-[#102142] dark:text-slate-300 hover:text-[#C3142B] transition-colors font-manrope text-sm font-semibold tracking-tight" href="#">Sedes</a>
+<a class="text-[#102142] dark:text-slate-300 hover:text-[#C3142B] transition-colors font-manrope text-sm font-semibold tracking-tight" href="#">Nosotros</a>
+<a class="text-[#102142] dark:text-slate-300 hover:text-[#C3142B] transition-colors font-manrope text-sm font-semibold tracking-tight" href="#">Matrícula</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded font-bold hover:bg-secondary-container transition-all active:scale-95 duration-150">
+                Matricúlate ahora
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0">
+<img alt="Car interior at sunset" class="w-full h-full object-cover opacity-60" data-alt="luxury car dashboard interior at sunset overlooking Cali city lights with warm golden hour lighting and bokeh effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE3rysbJPgYpteZsKfkysMI32cS1tqYrKUPhs6aTNmctcY7fKIsx7j_n5JAFHuv-SH8Excpp6AQ3Y7dFYjNG6QdIf_sc51kFqKLBJ3cxwis5lYXRd8FmUan5t-hsPlRSlPg1bgoNlhpUZ8gtoimX4JqgIkGA2bE8wgEk8Qrll49oQj5Jd3K_4vELjCvttuaEL8-d0bzzqunpyrpm3UcO3Fqc4kqz6XyWG8U7Nrt2SDpQTMr8UkdvP-WILKbUvPzD_hbqC2UEqQgjk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary-fixed mb-6 border border-secondary/30">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="text-xs font-bold tracking-widest uppercase">27 Años de Excelencia en Cali</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                        Obtén tu Licencia con los <span class="text-secondary">Mejores</span> de Cali
+                    </h1>
+<p class="text-lg text-slate-300 mb-10 leading-relaxed font-light">
+                        Formamos conductores responsables con calidad humana y tecnología de punta. Únete a la comunidad de conductores más confiable de la ciudad.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded font-bold text-lg hover:bg-secondary-container transition-all shadow-xl shadow-secondary/20">
+                            Matricúlate ahora
+                        </button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded font-bold text-lg hover:bg-white/20 transition-all">
+                            Ver Programas
+                        </button>
+</div>
+</div>
+</div>
+<!-- Heritage Badge -->
+<div class="absolute bottom-12 right-12 hidden lg:block">
+<div class="bg-surface-container-low/10 backdrop-blur-xl p-8 border border-white/10 rounded-xl flex flex-col items-center">
+<span class="text-secondary text-5xl font-extrabold mb-1 tracking-tighter">27</span>
+<span class="text-white text-[10px] font-bold tracking-[0.3em] uppercase opacity-80">Aniversario</span>
+<div class="mt-4 w-12 h-0.5 bg-secondary"></div>
+</div>
+</div>
+</section>
+<!-- Impact Stats -->
+<section class="bg-surface py-12 -mt-16 relative z-20">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest p-8 rounded shadow-sm border-l-4 border-secondary">
+<div class="text-primary-container text-3xl font-extrabold mb-1">5,000+</div>
+<div class="text-on-surface-variant text-sm font-medium">Graduados</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded shadow-sm border-l-4 border-secondary">
+<div class="text-primary-container text-3xl font-extrabold mb-1">98%</div>
+<div class="text-on-surface-variant text-sm font-medium">Aprobación</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded shadow-sm border-l-4 border-secondary">
+<div class="text-primary-container text-3xl font-extrabold mb-1">12+</div>
+<div class="text-on-surface-variant text-sm font-medium">Instructores Pro</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded shadow-sm border-l-4 border-secondary">
+<div class="text-primary-container text-3xl font-extrabold mb-1">24/7</div>
+<div class="text-on-surface-variant text-sm font-medium">Soporte</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Camino al Éxito</span>
+<h2 class="text-4xl font-extrabold text-primary-container mt-2">Nuestro Proceso</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
+<!-- Progress Line -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-px bg-outline-variant/30 z-0"></div>
+<!-- Step 01 -->
+<div class="relative z-10 group">
+<div class="bg-surface-container-low w-24 h-24 rounded flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-white" data-icon="how_to_reg">how_to_reg</span>
+</div>
+<div class="text-secondary font-black text-sm mb-2">01</div>
+<h3 class="text-xl font-bold text-primary-container mb-3">Registro</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed pr-8">Inscríbete fácilmente en cualquiera de nuestras sedes o vía web.</p>
+</div>
+<!-- Step 02 -->
+<div class="relative z-10 group mt-12 md:mt-0">
+<div class="bg-surface-container-low w-24 h-24 rounded flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-white" data-icon="menu_book">menu_book</span>
+</div>
+<div class="text-secondary font-black text-sm mb-2">02</div>
+<h3 class="text-xl font-bold text-primary-container mb-3">Teoría</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed pr-8">Clases dinámicas sobre normas de tránsito y seguridad vial.</p>
+</div>
+<!-- Step 03 -->
+<div class="relative z-10 group mt-12 md:mt-0">
+<div class="bg-surface-container-low w-24 h-24 rounded flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-white" data-icon="directions_car">directions_car</span>
+</div>
+<div class="text-secondary font-black text-sm mb-2">03</div>
+<h3 class="text-xl font-bold text-primary-container mb-3">Práctica</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed pr-8">Maniobras en vehículos modernos con instructores expertos.</p>
+</div>
+<!-- Step 04 -->
+<div class="relative z-10 group mt-12 md:mt-0">
+<div class="bg-surface-container-low w-24 h-24 rounded flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-white" data-icon="card_membership">card_membership</span>
+</div>
+<div class="text-secondary font-black text-sm mb-2">04</div>
+<h3 class="text-xl font-bold text-primary-container mb-3">Licencia</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed pr-8">¡Felicidades! Recibe tu licencia habilitada oficialmente ante el RUNT.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Cerca de Ti</span>
+<h2 class="text-4xl font-extrabold text-primary-container mt-2 mb-8">Encuéntranos en Cali</h2>
+<div class="space-y-6">
+<div class="bg-surface-container-lowest p-8 rounded shadow-sm border-l-4 border-primary-container">
+<h3 class="text-xl font-bold text-primary-container mb-2">Sede Avenida 6ta</h3>
+<div class="space-y-2 text-on-surface-variant text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+<span>Av. 6 Nte #12-45, Cali, Valle</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">call</span>
+<span>(602) 444-1234</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded shadow-sm border-l-4 border-primary-container">
+<h3 class="text-xl font-bold text-primary-container mb-2">Sede Calle 5ta</h3>
+<div class="space-y-2 text-on-surface-variant text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+<span>Calle 5 #38-10, Cali, Valle</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">call</span>
+<span>(602) 555-6789</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 h-[500px] rounded-xl overflow-hidden shadow-2xl relative">
+<img alt="Map of Cali" class="w-full h-full object-cover" data-alt="styled digital map of Cali, Colombia showing two specific location pins for Maserati Driving School branches" data-location="Cali, Colombia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj-w7GNMw0lK4jmh4mpRRoHzfCjDM8Qwk4f2Dd7eAqEvhQvTZs8ksuV0Q-dgi8FWgfUdsZThLgklkZOjneuX7r1ybnmD4pq2iZJVJuzQp9x8V2bV24OnekxV0A9jV760lonEVRd8Swh-gIx8xtREqRpRhleHALmxAS8yri51AzZEOR73hIulindEGCo-237z1kuQQsa5JAl7aBZNpsaeuVQHms0A18EjxsWKJ3ATUz944_LceJRo1WKtuj9-v85S1nvOrMy3ZoDoA"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Final CTA -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col items-center text-center mb-16">
+<div class="flex flex-wrap justify-center gap-12 mb-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex flex-col items-center gap-2">
+<img alt="RUNT Certified" class="h-12 w-auto" data-alt="Official Colombian RUNT registration bureau logo in navy blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbpf2DXH0KQdALG0Erfuk5nuPF-n1ec-qmTXTqBXj66xNOVr4cLmlI-k1EuFrkWEc9t3xknB_l3zmh0cfg_akUTkUWowibcKfXbrpC12pvI7ZoAKq1HCp__L1bGA1tHu8sTCvh0JGVrtrk9Msi_M27NNXm5-Z-kn8fiPQ2veKK6woXNrPaNQRVhflO30ccB1JX6PJAbBF3_GOZmkhbYGpH6Cctp6fXoegA_lzxbZpe8VGjv9GyxDdZP2GNG5pZA4QKx1hJS-WrTHY"/>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Certificado RUNT</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<img alt="Vigilado Super" class="h-12 w-auto" data-alt="Colombian Superintendence of Transport logo for officially regulated driving schools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQmqteCUkGyT6pQo4cnJiEM9cuCoWxr8azpFPjxKL4jR5EJ5yGLQnbjdkXHJ6PwwVN8MkzUE-STOItFBfxYCVryASeYEhoEg3kPw2Z6-3vrNqh0CIVamHmzo6Oa9lskQHGZq5xmA4RMyfSzNRu7D1yzxwLYx3SXiNTvExNqf02gEQVO6gBjg8G5aAfm77JqADQhFFQf8rokoQXbFraLuh7zBJlTre0lff_NqZAQPhbLU-szGPsbxWngwYuOvh9Qord0DSlp1UVU8c"/>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Vigilado S.U.P.E.R</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<img alt="ANSV Logo" class="h-12 w-auto" data-alt="National Road Safety Agency logo for road safety compliance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwnbN2_MQ6EpI5JIF1yRz1n9TAMIFhTcQb9OskeWz4IUv0sUpjd7UGszoWsnAkm1lunnZhaWrKcxxS3X6we4nVxiOPjd1Qwt5nHkp7-23x8geT3kHT44Z9xETsvsvmLGwbnJ-ZIwCib-X_4OSyg3e82xg6pfk7pXjlMFJ3fJZe2chu59Cr5NqefWbT9FANiwO97APoOe-KzyUVZPmWRr9RO_EruY1_my8SOTsjzKkcniT24aEXeVMzJdyNTBGQ4r2pTUq77qvjPa0"/>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Normativa ANSV</span>
+</div>
+</div>
+<div class="w-full bg-primary-container rounded-xl p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">¿Listo para tomar el control de tu futuro?</h2>
+<p class="text-on-primary-container text-lg max-w-2xl mx-auto mb-10">Más que una licencia, te entregamos la seguridad y confianza para conquistar las vías de Colombia.</p>
+<button class="bg-secondary text-on-secondary px-12 py-5 rounded font-bold text-xl hover:bg-secondary-container transition-all active:scale-95 shadow-2xl shadow-secondary/40">
+                                Matricúlate ahora
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#102142] dark:bg-black w-full pt-16 pb-8 border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 max-w-7xl mx-auto">
+<div>
+<h3 class="text-xl font-bold text-white mb-6 font-manrope">Maserati Driving School</h3>
+<p class="text-slate-400 font-manrope text-sm leading-relaxed mb-6">Expertos en formación de conductores con más de dos décadas de trayectoria en la Sucursal del Cielo.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">camera</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sedes</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-[#C3142B] font-manrope text-sm transition-colors" href="#">Avenida 6ta</a></li>
+<li><a class="text-slate-400 hover:text-[#C3142B] font-manrope text-sm transition-colors" href="#">Calle 5ta</a></li>
+<li><a class="text-slate-400 hover:text-[#C3142B] font-manrope text-sm transition-colors" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-[#C3142B] font-manrope text-sm transition-colors" href="#">Privacidad</a></li>
+<li><a class="text-slate-400 hover:text-[#C3142B] font-manrope text-sm transition-colors" href="#">Términos</a></li>
+</ul>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Newsletter</h4>
+<p class="text-slate-400 text-sm mb-4">Recibe tips de conducción y ofertas exclusivas.</p>
+<div class="flex">
+<input class="bg-white/5 border-none text-white text-sm focus:ring-1 focus:ring-secondary w-full rounded-l px-4 py-3" placeholder="Tu correo" type="email"/>
+<button class="bg-secondary text-white px-4 py-3 rounded-r hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-white/5 text-center">
+<p class="text-slate-500 text-xs font-manrope tracking-tight">
+                © 2024 Maserati Driving School Cali. 27 Years of Excellence.
+            </p>
+</div>
+</footer>
+</body></html>

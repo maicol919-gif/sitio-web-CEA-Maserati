@@ -1,0 +1,92 @@
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* .hide{
+  display:none;
+} */
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(
+      to right,
+      rgba(10, 25, 47, 0.9),
+      rgba(10, 25, 47, 0.6)
+    ),
+    url("img/hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  color: #dc3545;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: #cfd8e3;
+  max-width: 500px;
+}
+
+.badge-custom {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #ff4d4d;
+}
+
+/* Burbuja derecha */
+.hero-badge {
+  position: absolute;
+  right: 5%;
+  bottom: 15%;
+  background: linear-gradient(135deg, #2b2b2b, #6b6b6b);
+  padding: 30px 40px;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+}
+
+.hero-badge strong {
+  font-size: 2.5rem;
+  color: #dc3545;
+  display: block;
+}
+
+.hero-badge span {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contacto-dark {
+  background-color: #0f223f;
+  color: white;
+}
