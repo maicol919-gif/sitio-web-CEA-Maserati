@@ -33,3 +33,28 @@ setTimeout(() => {
      clearInterval(efectoResaltar); // El ciclo se destruye y deja de consumir recursos
     console.log("Efecto detenido.");
 }, 11000); // 4000 ms = 4 segundos
+
+// contacto-whatsapp
+ function toggleChat() {
+            const chat = document.getElementById('chatContainer');
+            chat.classList.toggle('d-none');
+        }
+        // ENVIAR MENSAJE POR WHATSAPP
+        
+        function enviarWhatsApp() {
+            // 1. Obtén los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // 2. Define tu número de WhatsApp (código de país + número, sin el símbolo '+')
+            const telefono = "573333333333"; // Reemplaza esto con tu número
+
+            // 3. Construye el texto que se enviará
+            const textoMensaje = `Hola, mi nombre es ${nombre}. ${mensaje}`;
+
+            // 4. Crea la URL para la API de WhatsApp
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(textoMensaje)}`;
+
+            // 5. Redirige a WhatsApp
+            window.open(url, '_blank');
+        }
