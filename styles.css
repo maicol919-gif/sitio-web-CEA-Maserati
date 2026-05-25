@@ -5,13 +5,10 @@ body {
 
 /* Animación de aparición */
 @keyframes aparecer {
-  from {
-    /* transform: translateY(0); */
+  from {  
     opacity: 0;
   }
-
-  to {
-    /* transform: translateY(20%); */
+  to {   
     opacity: 1;
   }
 }
