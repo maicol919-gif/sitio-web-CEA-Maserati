@@ -1,9 +1,32 @@
-
 body {
   font-family: 'Manrope', sans-serif;
 }
 
 
+/* Animación de aparición */
+@keyframes aparecer {
+  from {
+    /* transform: translateY(0); */
+    opacity: 0;
+  }
+
+  to {
+    /* transform: translateY(20%); */
+    opacity: 1;
+  }
+}
+
+/* NAVBAR */
+.logo {
+
+  animation: aparecer 1.5s ease-out;
+}
+
+.logo img {
+  width: 110px;
+  height: 110px;
+  margin-left: 2px;
+}
 
 /* HERO */
 
@@ -92,10 +115,10 @@ body {
 
 /* TESTIMONIOS */
 
-.div-calification i{
-  color:#0f223f;
+.div-calification i {
+  color: #0f223f;
   font-size: 12px;
-  }
+}
 
 
 /* MAPA */
@@ -117,6 +140,6 @@ body {
 /* media quierie para cambiar el alto de las card al cambiar el viewport */
 @media(min-width:768px) {
   .div-testimonials .div-comentario {
-    height: 140px;   
+    height: 140px;
   }
 }
