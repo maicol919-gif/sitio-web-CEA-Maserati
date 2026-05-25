@@ -32,7 +32,7 @@ const efectoResaltar=setInterval(() => {
 setTimeout(() => {
      clearInterval(efectoResaltar); // El ciclo se destruye y deja de consumir recursos
     console.log("Efecto detenido.");
-}, 11000); // 4000 ms = 4 segundos
+},30000); // 4000 ms = 4 segundos
 
 // contacto-whatsapp
  function toggleChat() {
