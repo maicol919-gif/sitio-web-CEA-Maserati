@@ -1167,3 +1167,22 @@ section {
   font-size: 0.92rem;
   margin-bottom: 0;
 }
+
+/* ── Links de servicios y convenios ── */
+.link-servicio,
+.link-convenio {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #dc3545;
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: 8px;
+  transition: color 0.2s;
+}
+
+.link-servicio:hover,
+.link-convenio:hover {
+  color: #a71d2a;
+  text-decoration: underline;
+}
