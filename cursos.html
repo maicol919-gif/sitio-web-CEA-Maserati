@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cursos de conducción Categoría A, B y C de CEA Maserati en Cali.">
+  <title>Cursos de conducción | CEA Maserati</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Ir al inicio">
+        <img src="./img/logo-maserati(1).png" alt="Logo Escuela Maserati">
+        <span>CEA Maserati</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios y convenios</a></li>
+          <li class="nav-item ms-lg-3">
+            <a href="index.html#contacto" class="btn btn-danger">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span>Programas</span>
+        <h1>Cursos de conducción disponibles</h1>
+        <p>
+          Elige la categoría que necesitas y consulta el detalle del curso. Cada botón de cotización abre el formulario
+          de asesoría con un mensaje sugerido según la categoría seleccionada.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios" class="section-pad bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="program-card h-100">
+              <img src="./img/Cursodemotos.jpg" alt="Estudiantes en curso de motocicletas categoría A" class="program-photo">
+              <div class="program-icon"><i class="bi bi-bicycle"></i></div>
+              <h3>Categoría A</h3>
+              <p>Formación para motocicletas y motocarros, con énfasis en maniobrabilidad y conducción preventiva.</p>
+              <ul class="program-list">
+                <li>Prácticas en pista y vía.</li>
+                <li>Control, equilibrio y seguridad vial.</li>
+                <li>Orientación sobre documentación y requisitos.</li>
+              </ul>
+              <div class="program-actions">
+                <button class="btn btn-outline-danger btn-curso" type="button" data-course="a"
+                  data-bs-toggle="modal" data-bs-target="#cursoModal">Ver detalle</button>
+                <a href="#" class="btn btn-link btn-whatsapp-context" data-course="a">Cotizar</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="program-card h-100 featured">
+              <img src="./img/car-instructor-explaining-city-traffic-rules-before-driving-car.jpg"
+                alt="Instructor enseñando conducción de vehículo particular categoría B" class="program-photo">
+              <div class="program-icon"><i class="bi bi-car-front-fill"></i></div>
+              <h3>Categoría B</h3>
+              <p>Curso para vehículos particulares. Ideal para quienes quieren obtener su licencia por primera vez.</p>
+              <ul class="program-list">
+                <li>Clases teóricas y prácticas.</li>
+                <li>Vehículos livianos para aprendizaje progresivo.</li>
+                <li>Acompañamiento durante el proceso de certificación.</li>
+              </ul>
+              <div class="program-actions">
+                <button class="btn btn-danger btn-curso" type="button" data-course="b" data-bs-toggle="modal"
+                  data-bs-target="#cursoModal">Ver detalle</button>
+                <a href="#" class="btn btn-link btn-whatsapp-context" data-course="b">Cotizar</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="program-card h-100">
+              <img src="./img/Instructorenpista.jpg" alt="Instructor en pista para formación categoría C" class="program-photo">
+              <div class="program-icon"><i class="bi bi-bus-front"></i></div>
+              <h3>Categoría C</h3>
+              <p>Capacitación para servicio público, enfocada en responsabilidad, normatividad y seguridad vial.</p>
+              <ul class="program-list">
+                <li>Enfoque en conducción profesional.</li>
+                <li>Normas de tránsito y atención al usuario.</li>
+                <li>Preparación para vehículos de servicio público.</li>
+              </ul>
+              <div class="program-actions">
+                <button class="btn btn-outline-danger btn-curso" type="button" data-course="c"
+                  data-bs-toggle="modal" data-bs-target="#cursoModal">Ver detalle</button>
+                <a href="#" class="btn btn-link btn-whatsapp-context" data-course="c">Cotizar</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cta-band mt-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-8">
+              <h2>¿No sabes qué categoría elegir?</h2>
+              <p>Un asesor puede ayudarte a revisar tu caso, requisitos y opciones de pago disponibles.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#" class="btn btn-danger btn-lg btn-whatsapp-context" data-course="general">Solicitar asesoría</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="cursoModal" tabindex="-1" aria-labelledby="cursoModalTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <span class="modal-kicker">Detalle del curso</span>
+            <h2 class="modal-title" id="cursoModalTitulo">Curso de conducción</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p id="cursoModalDescripcion"></p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="modal-info-box">
+                <strong>Incluye</strong>
+                <ul id="cursoModalIncluye"></ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="modal-info-box">
+                <strong>Vehículos de práctica</strong>
+                <p id="cursoModalVehiculos"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="#" id="cursoModalWhatsapp" class="btn btn-danger" data-bs-dismiss="modal"
+            data-course="general">Solicitar asesoría</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="chatContainer" class="chat-popup shadow-lg bg-white rounded d-none" role="dialog" aria-labelledby="chatTitulo"
+    aria-hidden="true">
+    <div class="chat-header p-2 bg-success text-white rounded-top d-flex justify-content-between align-items-start">
+      <div class="d-flex gap-2 align-items-center">
+        <img src="./img/logo-maserati(1).png" class="rounded-circle" alt="Logo CEA Maserati" width="50" height="50">
+        <p class="mb-0">
+          <span class="fw-bold">CEA Maserati</span><br>
+          <span id="chatTitulo">Asesoría</span>
+        </p>
+      </div>
+      <button type="button" class="btn-close btn-close-white" aria-label="Cerrar asesoría" data-chat-close></button>
+    </div>
+    <div class="chat-body p-3">
+      <p class="bg-light p-2 mb-3 rounded shadow-sm">
+        ¡Bienvenido! Estamos aquí para asesorarte. Déjanos tu inquietud y te responderemos lo antes posible.
+      </p>
+      <p id="chatConfirmacion" class="alert alert-success d-none mb-3" role="status"></p>
+      <form id="contactForm">
+        <div class="mb-2 shadow-sm">
+          <label class="visually-hidden" for="nombre">Nombre</label>
+          <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+        </div>
+        <div class="mb-2 shadow-sm">
+          <label class="visually-hidden" for="telefonoAsesoria">Teléfono</label>
+          <input type="tel" id="telefonoAsesoria" class="form-control" placeholder="Teléfono (10 dígitos)"
+            inputmode="numeric" maxlength="10" pattern="[0-9]{10}" required>
+        </div>
+        <div class="mb-3 shadow-sm">
+          <label class="visually-hidden" for="mensaje">Mensaje</label>
+          <textarea id="mensaje" class="form-control" rows="3" placeholder="Tu mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Enviar solicitud</button>
+      </form>
+    </div>
+  </div>
+
+  <button type="button" class="btn-whatsapp" aria-label="Abrir formulario de asesoría" data-chat-toggle>
+    <i class="bi bi-whatsapp"></i>
+  </button>
+
+  <footer class="footer text-white text-center py-3">
+    <p class="mb-0">© 2026 Escuela de Conducción Maserati. Proyecto académico de mejora web.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación — CEA Maserati | Proyecto final</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #101723;
+      color: #f4f6f8;
+      font-family: "Manrope", sans-serif;
+      overflow: hidden;
+    }
+
+    .deck {
+      height: 100vh;
+      position: relative;
+      width: 100vw;
+    }
+
+    .slide {
+      display: none;
+      height: 100%;
+      overflow-y: auto;
+      padding: 48px 64px 80px;
+      width: 100%;
+    }
+
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide--hero {
+      background: linear-gradient(135deg, #17324d 0%, #101723 55%, #3a1018 100%);
+      text-align: center;
+    }
+
+    .slide--light {
+      background: #f4f6f8;
+      color: #253040;
+    }
+
+    .kicker {
+      color: #dc3545;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .slide--light .kicker {
+      color: #dc3545;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 720px;
+      opacity: 0.9;
+    }
+
+    .slide--light .subtitle {
+      color: #405064;
+    }
+
+    .badge {
+      background: #dc3545;
+      border-radius: 999px;
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      padding: 8px 18px;
+    }
+
+    .team-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 32px;
+      max-width: 700px;
+    }
+
+    .team-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #dc3545;
+      border-radius: 8px;
+      padding: 16px 20px;
+      text-align: left;
+    }
+
+    .slide--light .team-card {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-left: 4px solid #dc3545;
+    }
+
+    .team-card strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .team-card span {
+      color: #8a96a8;
+      font-size: 0.9rem;
+    }
+
+    .slide--light .team-card span {
+      color: #536173;
+    }
+
+    ul {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-left: 1.2rem;
+      max-width: 800px;
+    }
+
+    .cols {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 24px;
+      max-width: 900px;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+
+    .slide--light .box {
+      background: #fff;
+      border: 1px solid #dde3ea;
+    }
+
+    .box h3 {
+      color: #dc3545;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+      max-width: 800px;
+    }
+
+    .tech-tag {
+      background: #17324d;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 10px 16px;
+    }
+
+    .slide--light .tech-tag {
+      background: #e8edf2;
+      color: #17324d;
+    }
+
+    .pages {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 28px;
+      max-width: 900px;
+    }
+
+    .page-card {
+      background: #17324d;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .slide--light .page-card {
+      background: #17324d;
+      color: #fff;
+    }
+
+    .page-card strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .demo-steps {
+      counter-reset: step;
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .demo-steps li {
+      counter-increment: step;
+      margin-bottom: 14px;
+      padding-left: 40px;
+      position: relative;
+    }
+
+    .demo-steps li::before {
+      background: #dc3545;
+      border-radius: 50%;
+      content: counter(step);
+      font-size: 0.85rem;
+      font-weight: 800;
+      height: 28px;
+      left: 0;
+      line-height: 28px;
+      position: absolute;
+      text-align: center;
+      top: 2px;
+      width: 28px;
+    }
+
+    .controls {
+      align-items: center;
+      bottom: 0;
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      left: 0;
+      padding: 16px 24px;
+      position: fixed;
+      right: 0;
+      z-index: 10;
+    }
+
+    .controls button {
+      background: #dc3545;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 10px 20px;
+    }
+
+    .controls button:hover {
+      background: #c82333;
+    }
+
+    .controls button.secondary {
+      background: #17324d;
+    }
+
+    .progress {
+      color: #8a96a8;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .logo-line {
+      margin-top: 28px;
+      opacity: 0.85;
+    }
+
+    .component-code {
+      color: #ffd2d6;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin: 10px 0 18px;
+    }
+
+    .slide--intro {
+      text-align: center;
+    }
+
+    .team-intro-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+      opacity: 0.65;
+      text-transform: uppercase;
+    }
+
+    .slide--compact {
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+
+    .preview-wrap {
+      margin-top: 14px;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .preview-shot {
+      background: #fff;
+      border: 3px solid #2a3d52;
+      border-radius: 10px;
+      display: block;
+      max-height: 50vh;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .slide--light .preview-shot {
+      border-color: #c5ced8;
+    }
+
+    .preview-frame {
+      background: #fff;
+      border: 3px solid #2a3d52;
+      border-radius: 10px;
+      height: 48vh;
+      max-height: 440px;
+      width: 100%;
+    }
+
+    .slide--light .preview-frame {
+      border-color: #c5ced8;
+    }
+
+    .url-caption {
+      font-size: 0.85rem;
+      margin-top: 8px;
+      opacity: 0.75;
+    }
+
+    .slide-split {
+      align-items: start;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 0.95fr 1.05fr;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .slide-split ul {
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .slide-split h2 {
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      margin-bottom: 12px;
+    }
+
+    .audience-list {
+      list-style: none;
+      margin-left: 0;
+      max-width: 760px;
+    }
+
+    .audience-list li {
+      border-left: 3px solid #dc3545;
+      font-size: 1.08rem;
+      line-height: 1.55;
+      margin-bottom: 14px;
+      padding: 10px 0 10px 18px;
+    }
+
+    .slide--light .audience-list li {
+      border-left-color: #dc3545;
+    }
+
+    .team-final {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      justify-content: center;
+      margin: 28px auto 0;
+      max-width: 900px;
+    }
+
+    .team-final span {
+      font-size: 1rem;
+      font-weight: 700;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        padding: 32px 24px 90px;
+      }
+
+      .team-grid,
+      .cols,
+      .pages,
+      .slide-split {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-frame {
+        height: 36vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="deck" id="deck">
+
+    <section class="slide slide--hero active" data-slide="1">
+      <p class="badge">Talento Tech · Proyecto final</p>
+      <p class="kicker" style="color: #ffd2d6; margin-bottom: 8px;">Componente técnico</p>
+      <h1 style="font-size: clamp(1.6rem, 4vw, 2.5rem);">Desarrollo Web Full Stack</h1>
+      <p class="component-code">DWFSP1-250</p>
+      <h2 style="font-size: clamp(1.35rem, 3vw, 2rem); margin-top: 8px;">Sitio web Escuela de Conducción Maserati</h2>
+      <p class="subtitle">
+        Rediseño del sitio institucional de CEA Maserati en Cali
+      </p>
+    </section>
+
+    <section class="slide slide--hero slide--intro" data-slide="2">
+      <p class="team-intro-label">Presentado por</p>
+      <p class="subtitle" style="max-width: 560px;">
+        Un equipo de estudiantes del bootcamp Talento Tech, en el marco del proyecto final del componente técnico.
+      </p>
+      <p class="subtitle" style="font-size: 0.95rem; margin-top: 20px; opacity: 0.7;">
+        Escuela de Conducción Maserati · Cali · 2026
+      </p>
+    </section>
+
+    <section class="slide slide--light slide--compact" data-slide="3">
+      <p class="kicker">Situación inicial</p>
+      <h2>Sitio web actual de la academia</h2>
+      <p class="subtitle" style="text-align: left; margin: 0 0 8px; max-width: 100%; color: #536173;">
+        El sitio en línea tiene diseño antiguo, poca estructura y no muestra bien los cursos ni los convenios.
+      </p>
+      <div class="preview-wrap">
+        <img class="preview-shot" src="./img/presentacion/sitio-actual.png"
+          alt="Captura del sitio actual escuelamaserati.amawebs.com"
+          onerror="this.onerror=null;this.src='https://image.thum.io/get/width/960/noanimate/https://escuelamaserati.amawebs.com/';">
+      </div>
+      <p class="url-caption">https://escuelamaserati.amawebs.com/</p>
+    </section>
+
+    <section class="slide slide--light" data-slide="4">
+      <p class="kicker">Propuesta</p>
+      <h2>¿Qué buscamos lograr?</h2>
+      <p class="subtitle" style="text-align: left; margin: 0 0 20px; max-width: 100%; color: #536173;">
+        Ante esa situación, planteamos un sitio claro, moderno y adaptable a celular y computador.
+      </p>
+      <div class="cols">
+        <div class="box">
+          <h3>Objetivo general</h3>
+          <p>Crear un sitio web responsive que represente la academia y facilite consultar cursos y servicios.</p>
+        </div>
+        <div class="box">
+          <h3>Objetivos específicos</h3>
+          <ul style="font-size: 0.95rem; margin-top: 8px;">
+            <li>Tres páginas enlazadas</li>
+            <li>Formularios y asesoría</li>
+            <li>Galería con fotos reales</li>
+            <li>Mapa y redes sociales</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="5">
+      <p class="kicker">Arquitectura</p>
+      <h2>Estructura del sitio</h2>
+      <div class="pages">
+        <div class="page-card">
+          <strong>index.html</strong>
+          <span>Inicio, nosotros, galería, contacto</span>
+        </div>
+        <div class="page-card">
+          <strong>cursos.html</strong>
+          <span>Categorías A, B y C + modal</span>
+        </div>
+        <div class="page-card">
+          <strong>servicios.html</strong>
+          <span>Servicios y convenios</span>
+        </div>
+      </div>
+      <p class="subtitle" style="margin-top: 28px; text-align: left;">
+        Archivos de apoyo: <strong>styles.css</strong>, <strong>script.js</strong>, carpeta <strong>img/</strong>
+      </p>
+    </section>
+
+    <section class="slide slide--light" data-slide="6">
+      <p class="kicker">Tecnologías del curso</p>
+      <h2>Lo que aplicamos del componente técnico</h2>
+      <div class="tech-row">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">Bootstrap 5</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Bootstrap Icons</span>
+      </div>
+      <ul style="margin-top: 28px;">
+        <li><strong>HTML5:</strong> secciones, formularios, imágenes y enlaces entre páginas.</li>
+        <li><strong>CSS3:</strong> estilos propios, colores de marca y carrusel de la galería.</li>
+        <li><strong>Bootstrap:</strong> menú responsive, columnas, modal y botones.</li>
+        <li><strong>JavaScript:</strong> validación, modal de cursos y panel de asesoría.</li>
+      </ul>
+      <p class="subtitle" style="margin-top: 20px; color: #536173;">
+        No usamos base de datos en esta entrega: es un sitio estático según el alcance del proyecto.
+      </p>
+    </section>
+
+    <section class="slide slide--compact" data-slide="7">
+      <p class="kicker">Sitio desarrollado</p>
+      <div class="slide-split">
+        <div>
+          <h2>Página de inicio</h2>
+          <ul>
+            <li>Banner principal y acceso a cursos.</li>
+            <li>Quiénes somos con fotos, misión y visión.</li>
+            <li>Galería, proceso en 3 pasos y contacto.</li>
+          </ul>
+        </div>
+        <div class="preview-wrap">
+          <iframe class="preview-frame" src="index.html" title="Vista previa página de inicio"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--light slide--compact" data-slide="8">
+      <p class="kicker">Sitio desarrollado</p>
+      <div class="slide-split">
+        <div>
+          <h2>Página de cursos</h2>
+          <ul>
+            <li>Categorías A, B y C con imagen acorde.</li>
+            <li>Modal con detalle del programa.</li>
+            <li>Cotización por formulario de asesoría.</li>
+          </ul>
+        </div>
+        <div class="preview-wrap">
+          <iframe class="preview-frame" src="cursos.html" title="Vista previa página de cursos"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--compact" data-slide="9">
+      <p class="kicker">Sitio desarrollado</p>
+      <div class="slide-split">
+        <div>
+          <h2>Servicios y convenios</h2>
+          <ul>
+            <li>Capacitaciones complementarias en seguridad vial.</li>
+            <li>Cupo Brilla, Sistecrédito, Tu Licencia y grupos.</li>
+            <li>Mismo menú en todas las páginas del sitio.</li>
+          </ul>
+        </div>
+        <div class="preview-wrap">
+          <iframe class="preview-frame" src="servicios.html" title="Vista previa servicios y convenios"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--light" data-slide="10">
+      <p class="kicker">JavaScript</p>
+      <h2>Funcionalidades interactivas</h2>
+      <ul>
+        <li>Scroll suave al navegar por secciones del inicio.</li>
+        <li>Validación de teléfono (10 dígitos) en formularios.</li>
+        <li>Modal dinámico según categoría del curso.</li>
+        <li>Panel de asesoría flotante con confirmación al enviar.</li>
+        <li>Contacto principal por correo (<code>mailto:</code>).</li>
+      </ul>
+    </section>
+
+    <section class="slide slide--light" data-slide="11">
+      <p class="kicker">Demostración en vivo</p>
+      <h2>Recorrido del sitio desarrollado</h2>
+      <p class="subtitle" style="text-align: left; margin: 0 0 20px; max-width: 100%; color: #405064;">
+        A continuación puede observar el sitio en funcionamiento:
+      </p>
+      <ul class="audience-list">
+        <li><strong>Inicio:</strong> presentación de la escuela, galería fotográfica y datos de contacto.</li>
+        <li><strong>Cursos:</strong> categorías de licencia con información detallada y asesoría en línea.</li>
+        <li><strong>Servicios:</strong> formación complementaria y opciones de pago con convenios.</li>
+        <li><strong>Interactividad:</strong> formularios validados, modal de cursos y panel de asesoría.</li>
+      </ul>
+    </section>
+
+    <section class="slide slide--hero" data-slide="12">
+      <p class="kicker">Conclusión</p>
+      <h2>Gracias por su atención</h2>
+      <p class="subtitle">
+        Proyecto final — sitio responsive para CEA Maserati, desarrollado con HTML5, CSS3, Bootstrap 5 y JavaScript.
+      </p>
+      <p class="team-intro-label" style="margin-top: 32px;">Integrantes</p>
+      <div class="team-final">
+        <span>Verónica Aguirre</span>
+        <span>Fernando García Muñoz</span>
+        <span>Jefferson Bermeo</span>
+        <span>Maycol Martínez</span>
+      </div>
+      <p class="subtitle" style="margin-top: 28px;">¿Preguntas?</p>
+    </section>
+
+  </div>
+
+  <div class="controls">
+    <button type="button" class="secondary" id="btnPrev">Anterior</button>
+    <span class="progress" id="progress">1 / 12</span>
+    <button type="button" id="btnNext">Siguiente</button>
+    <button type="button" class="secondary" id="btnFull">Pantalla completa</button>
+  </div>
+
+  <script>
+    var slides = document.querySelectorAll(".slide");
+    var total = slides.length;
+    var actual = 0;
+    var progress = document.getElementById("progress");
+
+    function mostrarSlide(numero) {
+      if (numero < 0) {
+        numero = 0;
+      }
+      if (numero >= total) {
+        numero = total - 1;
+      }
+
+      actual = numero;
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+
+      slides[actual].classList.add("active");
+      progress.textContent = (actual + 1) + " / " + total;
+    }
+
+    document.getElementById("btnPrev").onclick = function () {
+      mostrarSlide(actual - 1);
+    };
+
+    document.getElementById("btnNext").onclick = function () {
+      mostrarSlide(actual + 1);
+    };
+
+    document.getElementById("btnFull").onclick = function () {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      }
+    };
+
+    document.onkeydown = function (event) {
+      if (event.key === "ArrowRight" || event.key === " ") {
+        mostrarSlide(actual + 1);
+      }
+      if (event.key === "ArrowLeft") {
+        mostrarSlide(actual - 1);
+      }
+    };
+  </script>
+</body>
+
+</html>

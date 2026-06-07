@@ -1,0 +1,16 @@
+Capturas para la presentación (presentacion.html)
+
+1. sitio-actual.png
+   Guarda aquí una captura de pantalla de:
+   https://escuelamaserati.amawebs.com/
+
+   Si el archivo no existe, la presentación intentará cargar una vista desde internet.
+   Recomendado: Win + Shift + S y pegar/guardar como sitio-actual.png
+
+2. Opcional (en lugar de los iframes en diapositivas 7-9):
+   - inicio-desarrollado.png  (captura de index.html)
+   - cursos-desarrollado.png  (captura de cursos.html)
+   - servicios-desarrollado.png (captura de servicios.html)
+
+Las diapositivas 7, 8 y 9 muestran el sitio en vivo con iframe si abres
+presentacion.html desde la carpeta CODIGO (misma carpeta que index.html).

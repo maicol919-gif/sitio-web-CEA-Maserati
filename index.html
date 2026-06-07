@@ -4,44 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escuela de Conducción Maserati</title>
+  <meta name="description"
+    content="Centro de Enseñanza Automovilística Maserati en Cali. Formación de conductores, cursos de conducción y asesoría.">
+  <title>Escuela de Conducción Maserati | CEA en Cali</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-  <!-- CSS propio -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
-      <div class="logo d-flex justify-content-center align-items-center">
-        <a class="navbar-brand fw-bold" href="#">CEA</a>
-        <img src="./img/logo-maserati(1).png" alt="logo maserati">
-      </div>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Ir al inicio">
+        <img src="./img/logo-maserati(1).png" alt="Logo Escuela Maserati">
+        <span>CEA Maserati</span>
+      </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="menu">
-
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
-      
-
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios y convenios</a></li>
           <li class="nav-item ms-lg-3">
             <a href="#contacto" class="btn btn-danger">Contáctanos</a>
           </li>
@@ -50,341 +40,473 @@
     </div>
   </nav>
 
-  <!-- HERO -->  
+  <main>
+    <section class="hero d-flex align-items-center" id="inicio">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 text-white">
+            <p class="badge-custom mb-3">
+              <i class="bi bi-star-fill"></i> 27 años formando conductores en Cali
+            </p>
 
-  <section class="hero d-flex align-items-center" id="inicio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 text-white">
+            <h1 class="hero-title">
+              Aprende a conducir con seguridad, confianza y acompañamiento real.
+            </h1>
 
-          <!-- Badge -->
-          <div class="badge-custom mb-3">
-            ★ 27 AÑOS DE EXCELENCIA EN CALI
+            <p class="hero-text">
+              En el Centro de Enseñanza Automovilística Maserati te guiamos desde la matrícula hasta tu certificación,
+              con instructores expertos, vehículos modernos y clases pensadas para tu ritmo.
+            </p>
+
+            <div class="hero-actions">
+              <a href="cursos.html" class="btn btn-danger btn-lg" id="btn-ver-cursos">
+                Ver cursos <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-lg btn-whatsapp-context" data-course="general">
+                Asesoría en línea
+              </a>
+            </div>
           </div>
 
-          <!-- Título -->
-          <h1 class="hero-title">
-            Obtén tu Licencia con<br>
-            los <span>Mejores de Cali</span>
-          </h1>
-
-          <!-- Descripción -->
-          <p class="hero-text">
-            Formamos conductores responsables con precisión técnica y calidad humana.
-            Nuestra trayectoria de 27 años garantiza tu seguridad al volante.
-          </p>
-
-          <!-- Botones -->
-          <div class="mt-4">
-            <a href="#contacto" class="btn btn-danger btn-matricula btn-lg me-3">
-              Matricúlate ahora →
-            </a>
-            <a href="#servicios" class="btn btn-outline-light btn-lg">
-              Ver Programas
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Burbuja derecha -->
-    <div class="hero-badge d-none d-lg-block">
-      <div>
-        <strong>27</strong>
-        <span>AÑOS DE MAESTRÍA</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE NOSOTROS -->
-<section class="section-nosotros bg-light" id="nosotros">
-
-    <div class="container">
-
-      <div class="row justify-content-between">
-        <div class="">
-          <h2 class="fw-bold mb-5 my-5 text-center">NOSOTROS</h2>
-        </div>
-        <div class="col-12 col-lg-5 .div-mision">
-          <h2 class="mt-5  mb-5 text-center">
-            MISIÓN
-          </h2>
-          <p class="mb-5">
-            <strong>"EL CENTRO DE ENSEÑANZA AUTOMOVILISTICA MASERATI"</strong> tiene como misión formar y/o certificar
-            conductores responsables, consientes y respetuosos de las normas de tránsito, enseñar la técnica correcta
-            para manejar un vehículo de forma preventiva adquiriendo conciencia y cultura en torno a la seguridad vial,
-            evaluar y certificar la aptitud en conducción de un aspirante dentro del proceso de formación y/o
-            certificación de la aptitud en conducción en cumplimiento de la normatividad legal vigente, en apego a
-            estándares de calidad, apoyados en modernos vehículos y personal idóneo que garantizan la confiabilidad y
-            veracidad de los resultadops a transmitir al RUNT.
-          </p>
-        </div>
-        <div class="col-12 col-lg-5">
-          <h2 class="mt-5 mb-5 text-center">
-            VISIÓN
-          </h2>
-          <p class="mb-5">
-            <strong>"EL CENTRO DE ENSEÑANZA AUTOMOVILISTICA MASERATI"</strong> se postula en el corto plazo como un
-            centro de enseñanza automovilistica lider en la ciudad por la transparencia de sus procesos, por la calidad
-            en la enseñanza, la comodidad y seguridad de sus vehiculos, el profesionalismo y crecimiento de sus
-            empleados y la calidad de sus servicios obtenidos el reconocimiento del mercado a través de la satisfacción
-            de sus clientes estando en la vanguardia en la educación para conductores.
-          </p>
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFICIOS -->
-  <section class="py-5 text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-5">¿Por qué elegirnos?</h2>
-
-      <div class="row">
-        <div class="col-md-3">
-          <i class="bi bi-person-check fs-1 text-danger"></i>
-          <h5 class="mt-3">Instructores certificados</h5>
-        </div>
-
-        <div class="col-md-3">
-          <i class="bi bi-clock fs-1 text-danger"></i>
-          <h5 class="mt-3">Horarios flexibles</h5>
-        </div>
-
-        <div class="col-md-3">
-          <i class="bi bi-car-front fs-1 text-danger"></i>
-          <h5 class="mt-3">Vehículos modernos</h5>
-        </div>
-
-        <div class="col-md-3">
-          <i class="bi bi-award fs-1 text-danger"></i>
-          <h5 class="mt-3">Alta aprobación</h5>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section id="servicios" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-5">Nuestros servicios</h2>
-
-      <div class="row">
-
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Categoría A</h5>
-              <p class="card-text">Motocicletas y motocarros.</p>
-              <a href="#contacto" class="btn btn-danger">Más info</a>
+          <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+            <div class="hero-card">
+              <strong>27</strong>
+              <span>años de experiencia</span>
+              <p>Formación responsable para conductores de moto, carro particular y servicio público.</p>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Categoría B</h5>
-              <p class="card-text">Vehículos particulares.</p>
-              <a href="#contacto" class="btn btn-danger">Más info</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Categoría C</h5>
-              <p class="card-text">Servicio público.</p>
-              <a href="#contacto" class="btn btn-danger">Más info</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROCESO -->
-  <section id="proceso" class="py-5 text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-5">¿Cómo funciona?</h2>
-
-      <div class="row">
-
-        <div class="col-md-4">
-          <div class="circle">1</div>
-          <h5 class="mt-3">Te registras</h5>
+    <section class="section-pad bg-light" id="nosotros">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span>Quiénes somos</span>
+          <h2>27 años formando conductores responsables en Cali</h2>
         </div>
 
-        <div class="col-md-4">
-          <div class="circle">2</div>
-          <h5 class="mt-3">Tomas clases</h5>
+        <div class="row g-4 align-items-center mb-5">
+          <div class="col-lg-6">
+            <div class="img-stack">
+              <img class="img-main"
+                src="./img/car-instructor-explaining-city-traffic-rules-before-driving-car.jpg"
+                alt="Instructor explicando normas de tránsito en clase práctica">
+              <img class="img-sub" src="./img/car-purchase.jpg" alt="Estudiante en formación de conducción">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <p class="about-p">
+              En CEA Maserati te acompañamos desde la matrícula hasta tu certificación, con instructores certificados,
+              vehículos modernos y horarios que se adaptan a tu rutina.
+            </p>
+            <div class="checks">
+              <span class="check-item"><i class="bi bi-check-lg"></i>Instructores certificados</span>
+              <span class="check-item"><i class="bi bi-check-lg"></i>Clases teóricas y prácticas</span>
+              <span class="check-item"><i class="bi bi-check-lg"></i>Horarios flexibles</span>
+              <span class="check-item"><i class="bi bi-check-lg"></i>Trámite guiado</span>
+            </div>
+            <a href="cursos.html" class="btn btn-danger mt-3">Ver cursos</a>
+          </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="circle">3</div>
-          <h5 class="mt-3">Presentas examen</h5>
-        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="info-panel h-100">
+              <i class="bi bi-bullseye"></i>
+              <h3>Misión</h3>
+              <p>
+                Formar conductores responsables y respetuosos de las normas de tránsito, con conducción preventiva y
+                cultura de seguridad vial.
+              </p>
+            </article>
+          </div>
 
+          <div class="col-lg-6">
+            <article class="info-panel h-100">
+              <i class="bi bi-eye"></i>
+              <h3>Visión</h3>
+              <p>
+                Ser reconocidos en Cali por la calidad de la enseñanza, la transparencia en el proceso y la confianza
+                de nuestros estudiantes.
+              </p>
+            </article>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-5">Testimonios</h2>
-
-      <div
-        class="row  div-testimonials d-flex justify-content-center justify-content-md-around gap-2 gap-md-0 text-md-14">
-
-        <div class="col-md-4  ">
-          <div class="card p-3 shadow-sm div-comentario justify-content-center align-items-lg-center py-3">
-            <div class="div-calification my-2">
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-            </div>
-            <p>"Excelente servicio, aprobé a la primera."</p>
-            <strong>- Juan</strong>
-          </div>
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span>Explora el sitio</span>
+          <h2>Información organizada según lo que necesitas</h2>
         </div>
 
-        <div class="col-md-4  ">
-          <div class="card p-3 shadow-sm div-comentario justify-content-center align-items-lg-center">
-            <div class="div-calification my-2">
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-            </div>
-            <p>"Muy buenos instructores."</p>
-            <strong>- Laura</strong>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="route-card">
+              <i class="bi bi-car-front-fill"></i>
+              <h3>Cursos de conducción</h3>
+              <p>Consulta las categorías A, B y C, sus detalles, vehículos de práctica y botones de cotización.</p>
+              <a href="cursos.html" class="btn btn-danger">Ver cursos</a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="route-card">
+              <i class="bi bi-tools"></i>
+              <h3>Servicios complementarios</h3>
+              <p>Revisa evaluaciones, manejo defensivo, normas de tránsito, mecánica básica y primeros auxilios.</p>
+              <a href="servicios.html" class="btn btn-outline-danger">Ver servicios</a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="route-card">
+              <i class="bi bi-credit-card-2-front"></i>
+              <h3>Convenios y pagos</h3>
+              <p>Explora alternativas como Cupo Brilla, Sistecrédito, Tu Licencia y convenios para grupos.</p>
+              <a href="servicios.html#convenios" class="btn btn-outline-danger">Ver convenios</a>
+            </article>
           </div>
         </div>
-
-        <div class="col-md-4 ">
-          <div class="card p-3 shadow-sm div-comentario justify-content-center align-items-lg-center">
-            <div class="div-calification my-2">
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-            </div>
-            <p>"Recomendado 100%."</p>
-            <strong>- Andrés</strong>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACTO -->
-  <!-- contacto-whatsapp -->
-  <div id="chatContainer" class="chat-popup shadow-lg mb-5 bg-white rounded d-none">
-    <div class="chat-header p-2 bg-success text-white rounded-top d-flex justify-content-between">
+    <section class="section-pad" id="beneficios">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span>Ventajas</span>
+          <h2>¿Por qué elegir Maserati?</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="benefit-item">
+              <i class="bi bi-person-check"></i>
+              <h3>Instructores certificados</h3>
+              <p>Acompañamiento claro, paciente y orientado a conducir con criterio.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="benefit-item">
+              <i class="bi bi-calendar-check"></i>
+              <h3>Horarios flexibles</h3>
+              <p>Opciones pensadas para estudiantes, trabajadores y grupos empresariales.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="benefit-item">
+              <i class="bi bi-car-front"></i>
+              <h3>Vehículos modernos</h3>
+              <p>Prácticas en carros cómodos y adecuados para ganar seguridad al volante.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="benefit-item">
+              <i class="bi bi-shield-check"></i>
+              <h3>Trámite guiado</h3>
+              <p>Orientación durante el proceso de inscripción, clases y certificación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="galeria">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span>Galería</span>
+          <h2>Conoce nuestra escuela</h2>
+        </div>
+      </div>
+
+      <div class="carousel-outer">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img src="./img/Entregadellaves.png" alt="Atención personalizada en CEA Maserati">
+            </div>
+            <div class="carousel-label">
+              <strong>Atención personalizada</strong>
+              <span>Te acompañamos desde el primer día hasta tu certificación.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img src="./img/Examendelicencia.jpg" alt="Preparación para examen de licencia">
+            </div>
+            <div class="carousel-label">
+              <strong>Examen de licencia</strong>
+              <span>Preparación completa para aprobar tu prueba con confianza.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img src="./img/Instructorenpista.jpg" alt="Instructor en pista de práctica">
+            </div>
+            <div class="carousel-label">
+              <strong>Instructor experto</strong>
+              <span>Clases prácticas con instructores certificados en pista.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img src="./img/EquipoMaserati.png" alt="Equipo de la escuela Maserati">
+            </div>
+            <div class="carousel-label">
+              <strong>Equipo Maserati</strong>
+              <span>27 años formando conductores responsables en Cali.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img src="./img/Camisetaroja.jpg" alt="Personal uniformado de la academia">
+            </div>
+            <div class="carousel-label">
+              <strong>Uniformados y comprometidos</strong>
+              <span>Identidad y profesionalismo en cada clase.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="carousel-img-wrap">
+              <img src="./img/Cursodemotos.jpg" alt="Curso de motocicletas categoría A">
+            </div>
+            <div class="carousel-label">
+              <strong>Curso de motocicletas</strong>
+              <span>Flota de motos moderna para tu práctica categoría A.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide" aria-hidden="true">
+            <div class="carousel-img-wrap">
+              <img src="./img/Entregadellaves.png" alt="">
+            </div>
+            <div class="carousel-label">
+              <strong>Atención personalizada</strong>
+              <span>Te acompañamos desde el primer día hasta tu certificación.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide" aria-hidden="true">
+            <div class="carousel-img-wrap">
+              <img src="./img/Examendelicencia.jpg" alt="">
+            </div>
+            <div class="carousel-label">
+              <strong>Examen de licencia</strong>
+              <span>Preparación completa para aprobar tu prueba con confianza.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide" aria-hidden="true">
+            <div class="carousel-img-wrap">
+              <img src="./img/Instructorenpista.jpg" alt="">
+            </div>
+            <div class="carousel-label">
+              <strong>Instructor experto</strong>
+              <span>Clases prácticas con instructores certificados en pista.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide" aria-hidden="true">
+            <div class="carousel-img-wrap">
+              <img src="./img/EquipoMaserati.png" alt="">
+            </div>
+            <div class="carousel-label">
+              <strong>Equipo Maserati</strong>
+              <span>27 años formando conductores responsables en Cali.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide" aria-hidden="true">
+            <div class="carousel-img-wrap">
+              <img src="./img/Camisetaroja.jpg" alt="">
+            </div>
+            <div class="carousel-label">
+              <strong>Uniformados y comprometidos</strong>
+              <span>Identidad y profesionalismo en cada clase.</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide" aria-hidden="true">
+            <div class="carousel-img-wrap">
+              <img src="./img/Cursodemotos.jpg" alt="">
+            </div>
+            <div class="carousel-label">
+              <strong>Curso de motocicletas</strong>
+              <span>Flota de motos moderna para tu práctica categoría A.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="section-pad">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span>Paso a paso</span>
+          <h2>Así funciona tu proceso</h2>
+        </div>
+
+        <div class="row g-4 process-row">
+          <div class="col-md-4">
+            <div class="process-step">
+              <span>1</span>
+              <h3>Te asesoramos</h3>
+              <p>Resolvemos dudas sobre categoría, requisitos, horarios y valor del curso.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="process-step">
+              <span>2</span>
+              <h3>Tomas tus clases</h3>
+              <p>Avanzas con teoría, práctica e instructores que te acompañan en cada etapa.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="process-step">
+              <span>3</span>
+              <h3>Recibes certificación</h3>
+              <p>Finalizas el proceso y continúas el trámite correspondiente para tu licencia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section-pad contacto-dark">
+      <div class="container">
+        <div class="section-heading text-center text-white">
+          <span>Contacto</span>
+          <h2>Agenda tu asesoría</h2>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-6">
+            <div class="contact-panel h-100">
+              <form id="formulario" novalidate>
+                <div class="mb-3">
+                  <label for="nombreContacto" class="form-label">Nombre</label>
+                  <input id="nombreContacto" type="text" class="form-control" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="telefonoContacto" class="form-label">Teléfono</label>
+                  <input id="telefonoContacto" type="tel" class="form-control" placeholder="Ej: 3001234567"
+                    inputmode="numeric" maxlength="10" pattern="[0-9]{10}" required>
+                  <div class="invalid-feedback">Ingresa un teléfono válido de 10 dígitos, solo números.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="mensajeContacto" class="form-label">Mensaje</label>
+                  <textarea id="mensajeContacto" class="form-control" rows="4"
+                    placeholder="Cuéntanos qué categoría te interesa"></textarea>
+                </div>
+
+                <button class="btn btn-danger w-100" type="submit">Enviar solicitud por correo</button>
+              </form>
+
+              <div class="contact-data">
+                <p><i class="bi bi-geo-alt"></i><strong>Dirección:</strong> Cali, Colombia</p>
+                <p><i class="bi bi-telephone"></i><strong>Teléfono:</strong> 300 000 0000</p>
+                <p><i class="bi bi-clock"></i><strong>Horario:</strong> Lunes a sábado</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-side h-100">
+              <div class="location-panel">
+                <span>Ubicación</span>
+                <h3>Encuéntranos en Cali</h3>
+                <p>Consulta la ruta en el mapa y confirma horarios antes de acercarte a la sede.</p>
+              </div>
+
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63724.85828666542!2d-76.56522850443127!3d3.3980406687768285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6b75985d2c9%3A0x736efd3557497a83!2sMASERATI%20Escuela%20de%20Conducci%C3%B3n!5e0!3m2!1ses!2sco!4v1777932307886!5m2!1ses!2sco"
+                  title="Ubicación de la Escuela de Conducción Maserati en Cali" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <div class="social-media d-flex gap-3">
+                <a href="https://www.instagram.com/cea_maserati/?hl=es" target="_blank" rel="noopener noreferrer"
+                  aria-label="Instagram de CEA Maserati">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                  <i class="bi bi-tiktok"></i>
+                </a>
+                <a href="#" class="social-button btn-whatsapp-context" data-course="general"
+                  aria-label="Abrir formulario de asesoría">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="chatContainer" class="chat-popup shadow-lg bg-white rounded d-none" role="dialog" aria-labelledby="chatTitulo"
+    aria-hidden="true">
+    <div class="chat-header p-2 bg-success text-white rounded-top d-flex justify-content-between align-items-start">
       <div class="d-flex gap-2 align-items-center">
-        <img src="./img/logo-maserati(1).png" class="rounded-circle" alt="">
-        <p>
-          <span>CEA MASERATI</span><br>
-          Asesoria
+        <img src="./img/logo-maserati(1).png" class="rounded-circle" alt="Logo CEA Maserati" width="50" height="50">
+        <p class="mb-0">
+          <span class="fw-bold">CEA Maserati</span><br>
+          <span id="chatTitulo">Asesoría</span>
         </p>
       </div>
-      <button type="button" class="btn-close btn-close-white float-end" onclick="toggleChat()"></button>
+      <button type="button" class="btn-close btn-close-white" aria-label="Cerrar asesoría" data-chat-close></button>
     </div>
     <div class="chat-body p-3">
-      <p class="bg-light p-2 mb-5 rounded w-75 shadow-sm ">¡Bienvenido! <br><br> Estamos aquí para asesorarte, dejanos
-        tu inquietud y
-        te responderemos lo más pronto posible.</p>
-      <div class="d-flex-column w-100">
-
-        <form id="contactForm" class=" w-75 ms-auto">
-          <div class="mb-2 shadow-sm">
-            <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
-          </div>
-          <div class="mb-2 shadow-sm">
-            <input type="email" class="form-control" placeholder="Correo electrónico" required>
-          </div>
-          <div class="mb-5 shadow-sm">
-            <textarea class="form-control" id="mensaje" rows="3" placeholder="Tu mensaje"></textarea>
-          </div>
-          <div>
-            <button type="button" onclick="enviarWhatsApp()" class="btn btn-success w-100">Chat</button>
-          </div>
-        </form>
-      </div>
+      <p class="bg-light p-2 mb-3 rounded shadow-sm">
+        ¡Bienvenido! Estamos aquí para asesorarte. Déjanos tu inquietud y te responderemos lo antes posible.
+      </p>
+      <p id="chatConfirmacion" class="alert alert-success d-none mb-3" role="status"></p>
+      <form id="contactForm">
+        <div class="mb-2 shadow-sm">
+          <label class="visually-hidden" for="nombre">Nombre</label>
+          <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+        </div>
+        <div class="mb-2 shadow-sm">
+          <label class="visually-hidden" for="telefonoAsesoria">Teléfono</label>
+          <input type="tel" id="telefonoAsesoria" class="form-control" placeholder="Teléfono (10 dígitos)"
+            inputmode="numeric" maxlength="10" pattern="[0-9]{10}" required>
+        </div>
+        <div class="mb-3 shadow-sm">
+          <label class="visually-hidden" for="mensaje">Mensaje</label>
+          <textarea id="mensaje" class="form-control" rows="3" placeholder="Tu mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Enviar solicitud</button>
+      </form>
     </div>
   </div>
 
+  <button type="button" class="btn-whatsapp" aria-label="Abrir formulario de asesoría" data-chat-toggle>
+    <i class="bi bi-whatsapp"></i>
+  </button>
 
-  <section id="contacto" class="py-5 contacto-dark">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-5">Contáctanos</h2>
-
-      <div class="row g-4">
-
-        <!-- FORMULARIO -->
-        <div class="col-md-6">
-          <form id="formulario">
-            <input type="text" class="form-control mb-3" placeholder="Nombre" required>
-            <input type="tel" class="form-control mb-3" placeholder="Teléfono" required>
-            <textarea class="form-control mb-3" rows="4" placeholder="Mensaje"></textarea>
-            <button class="btn btn-danger w-100">Enviar</button>
-          </form>
-
-          <div class="mt-4">
-            <p><strong>Dirección:</strong> Cali, Colombia</p>
-            <p><strong>Teléfono:</strong> 300 000 0000</p>
-            <p><strong>Horario:</strong> Lun - Sáb</p>
-          </div>
-          <div class="social-media d-flex gap-3">
-            <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"> <i class="bi bi-tiktok text-light"></i></a>
-            <a href="https://www.instagram.com/cea_maserati/?hl=es" target="_blank" rel="noopener noreferrer"><i
-                class="bi bi-instagram text-light"></i></a>
-            <button class="btn-whatsapp" onclick="toggleChat()">
-              <i class="bi bi-whatsapp"></i> <!-- Requiere Bootstrap Icons -->
-            </button>
-          </div>
-        </div>
-
-
-        <!-- MAPA -->
-        <div class="col-md-6">
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63724.85828666542!2d-76.56522850443127!3d3.3980406687768285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6b75985d2c9%3A0x736efd3557497a83!2sMASERATI%20Escuela%20de%20Conducci%C3%B3n!5e0!3m2!1ses!2sco!4v1777932307886!5m2!1ses!2sco"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
-        </div>
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2026 Escuela de Conducción</p>
+  <footer class="footer text-white text-center py-3">
+    <p class="mb-0">© 2026 Escuela de Conducción Maserati. Proyecto académico de mejora web.</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS propio -->
   <script src="script.js"></script>
-
 </body>
 
 </html>
