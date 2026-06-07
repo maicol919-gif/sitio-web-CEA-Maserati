@@ -1,5 +1,5 @@
 // Correo de la academia (formulario de contacto en index)
-var correoAcademia = "contacto@escuelamaserati.com";
+var correoAcademia = "escuelamaserati@gmail.com";
 
 // Scroll suave al hacer clic en enlaces internos (#contacto, #nosotros, etc.)
 var enlacesInternos = document.querySelectorAll('a[href^="#"]');
@@ -56,16 +56,13 @@ if (formularioContacto !== null && inputTelefonoContacto !== null) {
       return;
     }
 
-    var asunto = "Solicitud desde la página web";
-    var cuerpo = "Nombre: " + nombre + "\n";
-    cuerpo = cuerpo + "Teléfono: " + telefono + "\n";
-    cuerpo = cuerpo + "Mensaje: " + mensaje;
-
-    var linkCorreo = "mailto:" + correoAcademia;
-    linkCorreo = linkCorreo + "?subject=" + encodeURIComponent(asunto);
-    linkCorreo = linkCorreo + "&body=" + encodeURIComponent(cuerpo);
-
-    window.location.href = linkCorreo;
+    var textoWA = "Hola, soy " + nombre + ". Mi teléfono es " + telefono + ".";
+    if (mensaje !== "") {
+      textoWA = textoWA + " " + mensaje;
+    } else {
+      textoWA = textoWA + " Quisiera información sobre los cursos de conducción.";
+    }
+    window.open("https://wa.me/573113186629?text=" + encodeURIComponent(textoWA), "_blank");
   });
 
   inputTelefonoContacto.addEventListener("input", function () {
@@ -283,6 +280,20 @@ function enviarFormularioAsesoria(event) {
       "Gracias " + nombre + ". Te contactaremos al " + telefono + " pronto.";
     mensajeConfirmacion.classList.remove("d-none");
   }
+
+  var nombre2 = nombre;
+  var telefono2 = telefono;
+  var mensaje2 = document.getElementById("mensaje").value.trim();
+
+  setTimeout(function() {
+    var textoWA = "Hola, soy " + nombre2 + ". Mi teléfono es " + telefono2 + ".";
+    if (mensaje2 !== "") {
+      textoWA = textoWA + " " + mensaje2;
+    } else {
+      textoWA = textoWA + " Quisiera información sobre los cursos de conducción.";
+    }
+    window.open("https://wa.me/573113186629?text=" + encodeURIComponent(textoWA), "_blank");
+  }, 800);
 
   formulario.reset();
 }
