@@ -243,6 +243,10 @@ function abrirChat(categoria, mensajeFijo) {
     texto = "Hola, quiero información del curso categoría B (carro particular).";
   } else if (categoria === "c") {
     texto = "Hola, quiero información del curso categoría C (servicio público).";
+  } else if (categoria === "combo-ab") {
+    texto = "Hola, quiero información sobre el combo A2 + B1 (moto y carro particular).";
+  } else if (categoria === "combo-ac") {
+    texto = "Hola, quiero información sobre el combo A2 + C1 (moto y servicio público).";
   } else {
     texto = "Hola, quiero asesoría sobre los cursos de conducción.";
   }
