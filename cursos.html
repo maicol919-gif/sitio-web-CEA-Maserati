@@ -56,10 +56,10 @@
     <section class="page-hero">
       <div class="container">
         <span>Programas</span>
-        <h1>Cursos de conducción disponibles</h1>
+        <h1>Encuentra el curso que se adapta a ti</h1>
         <p>
-          Elige la categoría que necesitas y consulta el detalle del curso. Cada botón de cotización abre el formulario
-          de asesoría con un mensaje sugerido según la categoría seleccionada.
+          Moto, carro particular o servicio público — tenemos la categoría que necesitas,
+          con instructores certificados y horarios flexibles en Cali.
         </p>
       </div>
     </section>
@@ -82,11 +82,12 @@
                 <li>Prácticas en pista y vía.</li>
                 <li>Control, equilibrio y seguridad vial.</li>
                 <li>Orientación sobre documentación y requisitos.</li>
+                <li>Vehículo de práctica: motocicletas propias de la escuela.</li>
               </ul>
               <div class="program-actions">
-                <button class="btn btn-outline-danger btn-curso" type="button" data-course="a"
-                  data-bs-toggle="modal" data-bs-target="#cursoModal">Ver detalle</button>
-                <a href="#" class="btn btn-link btn-whatsapp-context" data-course="a">Cotizar</a>
+                <a href="#" class="btn btn-danger w-100 btn-whatsapp-context" data-course="a">
+                  <i class="bi bi-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
               </div>
             </article>
           </div>
@@ -107,11 +108,12 @@
                 <li>Clases teóricas y prácticas.</li>
                 <li>Vehículos livianos para aprendizaje progresivo.</li>
                 <li>Acompañamiento durante el proceso de certificación.</li>
+                <li>Vehículo de práctica: carros particulares modernos.</li>
               </ul>
               <div class="program-actions">
-                <button class="btn btn-danger btn-curso" type="button" data-course="b" data-bs-toggle="modal"
-                  data-bs-target="#cursoModal">Ver detalle</button>
-                <a href="#" class="btn btn-link btn-whatsapp-context" data-course="b">Cotizar</a>
+                <a href="#" class="btn btn-danger w-100 btn-whatsapp-context" data-course="b">
+                  <i class="bi bi-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
               </div>
             </article>
           </div>
@@ -131,11 +133,12 @@
                 <li>Enfoque en conducción profesional.</li>
                 <li>Normas de tránsito y atención al usuario.</li>
                 <li>Preparación para vehículos de servicio público.</li>
+                <li>Vehículo de práctica: según categoría del proceso.</li>
               </ul>
               <div class="program-actions">
-                <button class="btn btn-outline-danger btn-curso" type="button" data-course="c"
-                  data-bs-toggle="modal" data-bs-target="#cursoModal">Ver detalle</button>
-                <a href="#" class="btn btn-link btn-whatsapp-context" data-course="c">Cotizar</a>
+                <a href="#" class="btn btn-danger w-100 btn-whatsapp-context" data-course="c">
+                  <i class="bi bi-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
               </div>
             </article>
           </div>
@@ -214,43 +217,8 @@
     </section>
   </main>
 
-  <div class="modal fade" id="cursoModal" tabindex="-1" aria-labelledby="cursoModalTitulo" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content course-modal">
-        <div class="modal-header">
-          <div>
-            <span class="modal-kicker">Detalle del curso</span>
-            <h2 class="modal-title" id="cursoModalTitulo">Curso de conducción</h2>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <p id="cursoModalDescripcion"></p>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <div class="modal-info-box">
-                <strong>Incluye</strong>
-                <ul id="cursoModalIncluye"></ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="modal-info-box">
-                <strong>Vehículos de práctica</strong>
-                <p id="cursoModalVehiculos"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <a href="#" id="cursoModalWhatsapp" class="btn btn-danger" data-bs-dismiss="modal"
-            data-course="general">Solicitar asesoría</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div id="chatContainer" class="chat-popup shadow-lg bg-white rounded d-none" role="dialog" aria-labelledby="chatTitulo"
+    <div id="chatContainer" class="chat-popup shadow-lg bg-white rounded d-none" role="dialog" aria-labelledby="chatTitulo"
     aria-hidden="true">
     <div class="chat-header p-2 bg-success text-white rounded-top d-flex justify-content-between align-items-start">
       <div class="d-flex gap-2 align-items-center">
@@ -291,7 +259,7 @@
   </button>
 
   <footer class="footer text-white text-center py-3">
-    <p class="mb-0">© 2026 Escuela de Conducción Maserati. Proyecto académico de mejora web.</p>
+    <p class="mb-0">© 2026 Escuela de Conducción Maserati. Todos los derechos reservados.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
