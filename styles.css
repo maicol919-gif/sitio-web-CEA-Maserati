@@ -1186,3 +1186,20 @@ section {
   color: #a71d2a;
   text-decoration: underline;
 }
+
+/* ── Alineación botones en service-card ── */
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card p {
+  flex: 1;
+}
+
+.service-card .btn,
+.service-card .link-servicio {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+}
