@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Servicios complementarios, convenios y facilidades de pago de CEA Maserati.">
-  <title>Servicios y convenios | CEA Maserati</title>
-
-
-  <!-- Favicon -->
+  <meta name="description" content="Servicios empresariales y convenios de pago de CEA Maserati en Cali.">
+  <title>Servicios | CEA Maserati</title>
   <link rel="icon" type="image/png" href="./img/logo-maserati(1).png">
   <link rel="apple-touch-icon" href="./img/logo-maserati(1).png">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ceamaserati.com/">
-  <meta property="og:title" content="CEA Maserati | Escuela de Conducción en Cali">
-  <meta property="og:description" content="27 años formando conductores en Cali. Cursos de moto, carro particular y servicio público.">
+  <meta property="og:url" content="https://ceamaserati.com/servicios.html">
+  <meta property="og:title" content="Servicios | CEA Maserati">
+  <meta property="og:description" content="Certificaciones empresariales y opciones de financiamiento en CEA Maserati, Cali.">
   <meta property="og:image" content="https://maicol919-gif.github.io/sitio-web-CEA-Maserati/img/EquipoMaserati.png">
   <meta property="og:locale" content="es_CO">
   <meta property="og:site_name" content="CEA Maserati">
@@ -24,26 +18,64 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .service-card i {
+      font-size: 2rem;
+      color: var(--color-red);
+    }
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--color-dark);
+      margin: 0;
+    }
+    .service-card p {
+      font-size: 0.88rem;
+      color: #536173;
+      line-height: 1.6;
+      margin: 0;
+      flex: 1;
+    }
+    .empresa-cta-banner {
+      background: var(--color-dark);
+      border-radius: 8px;
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+    .empresa-cta-banner h3 { font-size: 1.3rem; font-weight: 800; color: #fff; margin: 0; }
+    .empresa-cta-banner p  { color: rgba(255,255,255,0.55); font-size: 0.88rem; margin: 6px 0 0; }
+    @media (max-width: 575px) {
+      .empresa-cta-banner { padding: 28px 24px; }
+    }
+  </style>
 </head>
-
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Ir al inicio">
         <img src="./img/logo-maserati(1).png" alt="Logo Escuela Maserati">
         <span>CEA Maserati</span>
       </a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
         aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios y convenios</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
           <li class="nav-item ms-lg-3">
             <a href="index.html#contacto" class="btn btn-danger">Contáctanos</a>
           </li>
@@ -53,23 +85,24 @@
   </nav>
 
   <main>
+
     <section class="page-hero">
       <div class="container">
-        <span>Servicios y convenios</span>
-        <h1>Más apoyo para que empieces tu curso sin enredos</h1>
-        <p>
-          Te orientamos con servicios de formación vial, opciones de pago y convenios para que puedas avanzar con
-          claridad desde el primer contacto.
-        </p>
+        <span>Empresas &amp; Financiamiento</span>
+        <h1>Servicios para empresas<br>y opciones de pago</h1>
+        <p>Certificamos a los conductores de tu empresa y te ofrecemos alternativas para que el costo del curso no sea un obstáculo.</p>
       </div>
     </section>
 
-    <section id="otros-servicios" class="section-pad">
+    <section id="empresas" class="section-pad">
       <div class="container">
         <div class="section-heading text-center">
-          <span>Servicios complementarios</span>
-          <h2>Capacitaciones que refuerzan la seguridad al conducir</h2>
+          <span>Para empresas</span>
+          <h2>Certificaciones y capacitaciones</h2>
         </div>
+        <p class="text-center text-muted mb-5" style="max-width:560px;margin:0 auto 3rem;font-size:0.95rem;line-height:1.7;">
+          Formamos y certificamos a los conductores y operarios de tu empresa. Coordinamos grupos, horarios y documentación directamente con el área encargada.
+        </p>
 
         <div class="row g-4">
           <div class="col-md-6 col-lg-4">
@@ -77,54 +110,60 @@
               <i class="bi bi-truck-front"></i>
               <h3>Evaluación práctica para conductores</h3>
               <p>Revisamos el nivel de conducción para identificar fortalezas y aspectos que se pueden mejorar.</p>
-              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20la%20evaluación%20práctica%20para%20conductores." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
+              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20evaluación%20práctica%20para%20conductores%20de%20mi%20empresa." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-4">
             <article class="service-card h-100">
               <i class="bi bi-shield-plus"></i>
               <h3>Seguridad vial y manejo defensivo</h3>
               <p>Aprende a anticiparte a riesgos y tomar mejores decisiones en situaciones reales de tránsito.</p>
-              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20el%20curso%20de%20seguridad%20vial%20y%20manejo%20defensivo." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
+              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20manejo%20defensivo%20para%20mi%20empresa." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-4">
             <article class="service-card h-100">
               <i class="bi bi-signpost-split"></i>
               <h3>Normas y señales de tránsito</h3>
               <p>Refuerza las señales, normas y comportamientos que necesitas para conducir con más seguridad.</p>
-              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20el%20curso%20de%20normas%20y%20señales%20de%20tránsito." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
+              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20normas%20de%20tránsito%20para%20mi%20empresa." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-4">
             <article class="service-card h-100">
               <i class="bi bi-tools"></i>
               <h3>Mecánica automotriz básica</h3>
               <p>Conoce lo básico para cuidar tu vehículo e identificar señales de alerta antes de salir a la vía.</p>
-              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20el%20curso%20de%20mecánica%20automotriz%20básica." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
+              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20mecánica%20básica%20para%20mi%20empresa." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-4">
             <article class="service-card h-100">
               <i class="bi bi-fire"></i>
               <h3>Prevención y control de incendios</h3>
               <p>Recibe orientación para actuar con calma y seguridad ante situaciones de emergencia.</p>
-              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20el%20curso%20de%20prevención%20y%20control%20de%20incendios." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
+              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20prevención%20de%20incendios%20para%20mi%20empresa." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-4">
             <article class="service-card h-100">
               <i class="bi bi-heart-pulse"></i>
               <h3>Primeros auxilios en salud</h3>
               <p>Aprende pautas iniciales para responder ante incidentes mientras llega ayuda especializada.</p>
-              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20el%20curso%20de%20primeros%20auxilios%20en%20salud." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
+              <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20primeros%20auxilios%20para%20mi%20empresa." class="btn btn-outline-danger btn-sm mt-auto" target="_blank" rel="noopener noreferrer">Consultar →</a>
             </article>
           </div>
+        </div>
+
+        <div class="empresa-cta-banner">
+          <div>
+            <h3>¿Tienes un grupo o empresa?</h3>
+            <p>Coordinamos horarios, grupos y documentación. Cuéntanos cuántas personas y qué necesitan.</p>
+          </div>
+          <a href="https://wa.me/573113186629?text=Hola%2C%20represento%20una%20empresa%20y%20quiero%20información%20sobre%20capacitaciones%20para%20mi%20equipo."
+             class="btn btn-danger btn-lg" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp me-2"></i>Solicitar propuesta
+          </a>
         </div>
       </div>
     </section>
@@ -140,47 +179,38 @@
           <div class="col-md-6 col-lg-3">
             <article class="partner-card h-100">
               <div class="partner-mark">Brilla</div>
-              <i class="bi bi-lightning-charge"></i>
+              <i class="bi bi-lightning-charge" style="font-size:2rem;color:var(--color-red);"></i>
               <h3>Cupo Brilla</h3>
               <p>Si cuentas con cupo disponible, puedes consultar esta alternativa para pagar tu curso por cuotas.</p>
-              <a class="link-convenio" href="https://brilla.com.co/web/gdo/conoce-tu-credito" target="_blank" rel="noopener noreferrer">
-                Consultar mi cupo Brilla →
-              </a>
+              <a class="link-convenio" href="https://brilla.com.co/web/gdo/conoce-tu-credito" target="_blank" rel="noopener noreferrer">Consultar mi cupo Brilla →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-3">
             <article class="partner-card h-100">
               <div class="partner-mark">Sistecrédito</div>
-              <i class="bi bi-credit-card-2-front"></i>
+              <i class="bi bi-credit-card-2-front" style="font-size:2rem;color:var(--color-red);"></i>
               <h3>Pago por crédito</h3>
               <p>Consulta si puedes financiar tu curso y recibe orientación sobre los requisitos para aplicar.</p>
-              <a class="link-convenio" href="https://www.sistecredito.com/solicitud-de-credito/" target="_blank" rel="noopener noreferrer">
-                Solicitar crédito →
-              </a>
+              <a class="link-convenio" href="https://www.sistecredito.com/solicitud-de-credito/" target="_blank" rel="noopener noreferrer">Solicitar crédito →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-3">
             <article class="partner-card h-100">
               <div class="partner-mark">Tu Licencia</div>
-              <i class="bi bi-patch-check"></i>
+              <i class="bi bi-patch-check" style="font-size:2rem;color:var(--color-red);"></i>
               <h3>Gestión del proceso</h3>
               <p>Recibe acompañamiento para entender el proceso, los documentos y las opciones disponibles.</p>
-              <a class="link-convenio" href="https://www.milicencia.co/tramite/primera-vez" target="_blank" rel="noopener noreferrer">
-                Ver proceso en MiLicencia →
-              </a>
+              <a class="link-convenio" href="https://www.milicencia.co/tramite/primera-vez" target="_blank" rel="noopener noreferrer">Ver proceso en MiLicencia →</a>
             </article>
           </div>
-
           <div class="col-md-6 col-lg-3">
             <article class="partner-card h-100">
               <div class="partner-mark">Empresas</div>
-              <i class="bi bi-people"></i>
+              <i class="bi bi-people" style="font-size:2rem;color:var(--color-red);"></i>
               <h3>Grupos y convenios</h3>
               <p>Si representas una empresa o grupo, podemos orientar una propuesta según la necesidad de formación.</p>
-              <a class="link-convenio" href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20convenios%20para%20empresas%20o%20grupos%20en%20CEA%20Maserati." target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-whatsapp me-1"></i> Consultar convenio
+              <a class="link-convenio" href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20convenios%20para%20empresas%20en%20CEA%20Maserati." target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp me-1"></i>Consultar convenio
               </a>
             </article>
           </div>
@@ -191,10 +221,7 @@
         </p>
       </div>
     </section>
-  </main>
 
-
-    <!-- CTA Final -->
     <section class="section-pad contacto-dark">
       <div class="container">
         <div class="row g-4 align-items-center text-center text-lg-start">
@@ -203,7 +230,7 @@
             <p class="mb-0 opacity-75">Un asesor te orienta sobre requisitos, horarios y opciones de pago. Sin compromiso.</p>
           </div>
           <div class="col-lg-4 text-lg-end">
-            <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20los%20cursos%20de%20conducción%20en%20CEA%20Maserati."
+            <a href="https://wa.me/573113186629?text=Hola%2C%20quiero%20información%20sobre%20los%20servicios%20de%20CEA%20Maserati."
                class="btn btn-danger btn-lg" target="_blank" rel="noopener noreferrer">
               <i class="bi bi-whatsapp me-2"></i>Hablar con un asesor
             </a>
@@ -212,52 +239,17 @@
       </div>
     </section>
 
-  <div id="chatContainer" class="chat-popup shadow-lg bg-white rounded d-none" role="dialog" aria-labelledby="chatTitulo"
-    aria-hidden="true">
-    <div class="chat-header p-2 bg-success text-white rounded-top d-flex justify-content-between align-items-start">
-      <div class="d-flex gap-2 align-items-center">
-        <img src="./img/logo-maserati(1).png" class="rounded-circle" alt="Logo CEA Maserati" width="50" height="50">
-        <p class="mb-0">
-          <span class="fw-bold">CEA Maserati</span><br>
-          <span id="chatTitulo">Asesoría</span>
-        </p>
-      </div>
-      <button type="button" class="btn-close btn-close-white" aria-label="Cerrar asesoría" data-chat-close></button>
-    </div>
-    <div class="chat-body p-3">
-      <p class="bg-light p-2 mb-3 rounded shadow-sm">
-        ¡Bienvenido! Estamos aquí para asesorarte. Déjanos tu inquietud y te responderemos lo antes posible.
-      </p>
-      <p id="chatConfirmacion" class="alert alert-success d-none mb-3" role="status"></p>
-      <form id="contactForm">
-        <div class="mb-2 shadow-sm">
-          <label class="visually-hidden" for="nombre">Nombre</label>
-          <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
-        </div>
-        <div class="mb-2 shadow-sm">
-          <label class="visually-hidden" for="telefonoAsesoria">Teléfono</label>
-          <input type="tel" id="telefonoAsesoria" class="form-control" placeholder="Teléfono (10 dígitos)"
-            inputmode="numeric" maxlength="10" pattern="[0-9]{10}" required>
-        </div>
-        <div class="mb-3 shadow-sm">
-          <label class="visually-hidden" for="mensaje">Mensaje</label>
-          <textarea id="mensaje" class="form-control" rows="3" placeholder="Tu mensaje" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success w-100">Enviar solicitud</button>
-      </form>
-    </div>
-  </div>
-
-  <button type="button" class="btn-whatsapp" aria-label="Abrir formulario de asesoría" data-chat-toggle>
-    <i class="bi bi-whatsapp"></i>
-  </button>
+  </main>
 
   <footer class="footer text-white text-center py-3">
     <p class="mb-0">© 2026 Escuela de Conducción Maserati. Todos los derechos reservados.</p>
   </footer>
 
+  <a href="https://wa.me/573113186629" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
